@@ -77,7 +77,7 @@ def nba_etl_elt_pipeline():
     def build_and_load_features() -> str:
         # Computing rolling features and loading them
         from src.db.connection import get_connection
-        from src.transfrom.build_features import build_player_features
+        from src.transform.build_features import build_player_features
         from src.load.warehouse_loader import load_features
 
         with get_connection() as con:
